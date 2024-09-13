@@ -1,0 +1,19 @@
+@using MVC2.Controllers
+@using MVC2.Models
+@model CustomerOrderViewModel
+
+<p>@Model.Customer.FirstName @Model.Customer.LastName @Model.Customer.Id</p>
+@foreach (var o in Model.Orders)
+{ 
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h4 class="card-title">@o.ProductName</h4>
+        <h5 class="card-subtitle mb-2 text-body-secondary">@o.Id</h5>
+        <h6 class="card-text">@o.Price</h6>
+        <h6 class="card-text">@o.Quantity</h6>
+    </div>
+    <div class="card-footer">
+        Card footer
+    </div>
+    </div>
+}
