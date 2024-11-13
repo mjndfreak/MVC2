@@ -8,7 +8,7 @@ public class CustomersController : Controller
     public IActionResult Index()
     {
         // Basit bir model örneği oluşturuyoruz
-        var customer = new Customer
+        Customer customer = new Customer()
         {
             Id = 1,
             FirstName = "John",
